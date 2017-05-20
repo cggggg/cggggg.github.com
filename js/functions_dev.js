@@ -124,9 +124,9 @@ function timeElapse(date, mode) {
 		days = current.getDate() - date.getDate();
 		if (days < 0) {
 			days += getDaysInMonth(current.getMonth());
-			current.setDate(current.getDate() - 1);
+			current.setMonth(current.getMonth() - 1);
 		}
-		months = current.getMonth() - date.getMonth();
+		months = current.getMonth() - date.getMonth() + 1;
 		if (months < 0) {
 			months += 12;
 			current.setYear(current.getFullYear() - 1);
