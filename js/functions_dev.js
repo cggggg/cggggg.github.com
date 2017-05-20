@@ -133,7 +133,7 @@ function timeElapse(date, mode) {
 		}
 		years = current.getFullYear() - date.getFullYear();
 	} else {
-		days = Math.floor((current.getTime() - date.getTime()) / (1000 * 3600 * 24));
+		days = Math.floor((current.getTime() - date.getTime()) / (1000 * 3600 * 24)) + getDaysInMonth(current.getMonth()-1);
 	}
 
 	if (hours < 10) {
